@@ -1,5 +1,5 @@
 export const environment = {
-  firebaseApiKey: 'AIzaSyDmLx3pEBhBnZXQC1iTn9yvkdcD5agqqgc',
+  firebaseApiKey: 'AIzaSyCcO0Fe4-TOT-HK18Fe3B-C60syAHfCDqE',
   firebaseTaskManagementDbBaseUrl:
-    'https://taskmanagementappangular-default-rtdb.firebaseio.com',
+    'https://angular-e9e19-default-rtdb.firebaseio.com',
 };
