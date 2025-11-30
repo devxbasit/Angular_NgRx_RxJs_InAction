@@ -1,0 +1,20 @@
+<div class="container mt-4">
+    <div class="row row-cols-md-3 g-4">
+        <div class="col d-flex align-items-stretch" *ngFor="let product of products$ | async">
+            <div class="card border border-warning">
+                <img src="{{product.image}}" alt="" class="img-fixed-size">
+
+                <div class="card-body d-flex flex-column">
+                    <div class="card-title">{{product.title}}</div>
+                    <div class="card-text">Price: <strong>{{product.price}}</strong>$</div>
+                    <div>
+                        <div class="badge text-bg-primary mb-2">{{product.category}}</div>
+                        <br>
+                        <button class="btn btn-warning mb-2" (click)="addToCart(product)">Add to cart</button>
+                    </div>
+                    <p class="card-text">{{product.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

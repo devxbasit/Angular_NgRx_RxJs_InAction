@@ -1,0 +1,19 @@
+<div>
+  <h1>{{ this.title }}</h1>
+  <hr />
+
+  <app-list-errors [errors]="errors"></app-list-errors>
+  <div>
+    <a routerLink="/register" *ngIf="isLoginMode">New User? Create Account Here</a>
+    <a routerLink="/login" *ngIf="!isLoginMode">Existing User? Login Here</a>
+  </div>
+  <form [formGroup]="authForm" (ngSubmit)="onAuthFormSubmit()">
+    <input [disabled]="isFormSubmitting" *ngIf="!isLoginMode" type="text" formControlName="username" placeholder="Enter Username" />
+    <br />
+    <input [disabled]="isFormSubmitting" type="email" formControlName="email" placeholder="Enter Email" />
+    <br />
+    <input [disabled]="isFormSubmitting" type="password" formControlName="password" placeholder="Enter Password" />
+    <br />
+    <button [disabled]="isFormSubmitting" [disabled]="!authForm.valid">Submit</button>
+  </form>
+</div>

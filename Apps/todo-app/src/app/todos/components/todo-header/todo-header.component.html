@@ -1,0 +1,11 @@
+<h6>TODO Header</h6>
+<div>
+  <input type="checkbox" (click)="onToggleAll(toggleAll.checked)" #toggleAll />
+  <input
+    type="text"
+    (keyup.enter)="onAddTodo()"
+    [(ngModel)]="todo"
+    placeholder="what needs to be done"
+  />
+</div>
+<hr />

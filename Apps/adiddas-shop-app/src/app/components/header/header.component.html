@@ -1,0 +1,27 @@
+<div class="container-fluid bg-primary">
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-md">
+                <a class="navbar-brand text-warning" routerLink="/"><b>Adiddas Shop</b></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item active"><a class="nav-link text-white" routerLink="products">Products</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li>
+                            <i class="fas fa-shopping-cart"></i>
+                            <fa-icon [icon]="faShoppingCart" class="text-white"> </fa-icon>
+                            <span class="badge text-bg-danger">{{cartApiService.getCartItemsCount()}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+</div>

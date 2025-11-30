@@ -1,0 +1,20 @@
+<div>
+  <input
+    type="checkbox"
+    [checked]="Todo.isCompleted"
+    (change)="toggleTodo(Todo.id)"
+    #todoCheckbox
+  />
+  <label
+    [ngClass]="{ show: !isEditMode, hide: isEditMode }"
+    (dblclick)="enableEditMode()"
+    >{{ Todo.text }}</label
+  >
+  <input
+    [ngClass]="{ show: isEditMode, hide: !isEditMode }"
+    type="text"
+    #todoTxt
+    (keyup.enter)="updateTodo(todoTxt.value)"
+  />
+  <button (click)="deleteTodo(Todo.id)">X</button>
+</div>

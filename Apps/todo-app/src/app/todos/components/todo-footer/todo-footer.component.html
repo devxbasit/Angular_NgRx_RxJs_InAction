@@ -1,0 +1,18 @@
+<button
+  [ngClass]="{ 'active-filter-btn': currentFilter === FilterEnum.all }"
+  (click)="changeFilter(FilterEnum.all)"
+>
+  All
+</button>
+<button
+  [ngClass]="{ 'active-filter-btn': currentFilter === FilterEnum.active }"
+  (click)="changeFilter(FilterEnum.active)"
+>
+  Active
+</button>
+<button
+  [ngClass]="{ 'active-filter-btn': currentFilter === FilterEnum.completed }"
+  (click)="changeFilter(FilterEnum.completed)"
+>
+  Completed
+</button>

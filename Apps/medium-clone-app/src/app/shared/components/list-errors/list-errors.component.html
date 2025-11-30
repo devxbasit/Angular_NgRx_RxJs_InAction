@@ -1,0 +1,3 @@
+<div *ngIf="errorsList">
+  <p class="error" *ngFor="let error of errorsList; trackBy: trackByFn">{{ error }}</p>
+</div>

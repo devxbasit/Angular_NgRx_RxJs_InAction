@@ -1,0 +1,21 @@
+<h1>Settings</h1>
+
+<app-list-errors [errors]="errors"></app-list-errors>
+
+<form [formGroup]="settingsForm" (ngSubmit)="onSettingsFormSubmit()">
+  <input type="text" formControlName="image" placeholder="Image" />
+  <br />
+  <input type="text" formControlName="username" placeholder="UserName" />
+  <br />
+  <textarea formControlName="bio" placeholder="Bio"></textarea>
+  <br />
+  <input type="text" formControlName="email" placeholder="Email" />
+  <br />
+  <input type="text" formControlName="password" placeholder="Password" />
+  <br />
+  <button type="submit" [disabled]="!settingsForm.valid">Update Settings</button>
+</form>
+
+<hr />
+
+<button (click)="logout()">Logout</button>

@@ -1,0 +1,19 @@
+<div class="app-header">
+    <!--APP LOGO-->
+    <div class="app-header-logo">
+        <h2>Task Management App</h2>
+    </div>
+
+    <!--APP NAVBAR-->
+    <div class="app-header-navbar">
+        @if (isLoggedIn) {
+        <a routerLink="dashboard/overview">Overview</a>
+        <a routerLink="dashboard/stats">Stats</a>
+        <a style="cursor: pointer;" *ngIf="isLoggedIn" (click)="onLogout()">Logout</a>
+        }
+
+        @if (!isLoggedIn) {
+        <a routerLink="/login">Login</a>
+        }
+    </div>
+</div>

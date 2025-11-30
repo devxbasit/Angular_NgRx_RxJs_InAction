@@ -1,0 +1,34 @@
+create new app with prefix flag
+$ ng new ecommerce --prefix ecommerce
+
+Add linting support
+$ ng lint
+
+Install bootstrap, fontawesome, material UI 
+$ npm install bootstrap
+$ ng add @fortawesome/angular-fontawesome
+$ ng add @angular/material
+
+
+Goto angular.json file, add path of bootstrap.min.css to styles array ("node_modules/bootstrap/dist/css bootstrap.min.css")
+
+
+FontAwesome Usage
+Add FontAwesomeModule to the imports array
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'; // import icon
+faShoppingCart = faShoppingCart		//note (in class)
+<fa-icon [icon]="faShoppingCart" class="text-white"> </fa-icon>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

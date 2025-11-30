@@ -1,0 +1,18 @@
+<div class="center">
+  <h5>Medium Clone app using RealWorl Conduit</h5>
+
+  <div *appShowAuthed="false">
+    <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/login">Sign In</a>
+    <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/register">Sign Up</a>
+  </div>
+
+  <div *appShowAuthed="true">
+    <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">Home</a>
+    <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/articles">New Article</a>
+    <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/settings">Settings</a>
+
+    <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/editor"
+      ><img width="40px" [src]="currentUser?.image || 'https://static.productionready.io/images/smiley-cyrus.jpg'" alt="" /> {{ currentUser?.username }}</a
+    >
+  </div>
+</div>
