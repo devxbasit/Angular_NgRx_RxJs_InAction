@@ -1,4 +1,3 @@
-import { setNotificationAction } from './../../../Shared/store/shared.actions';
 import { IUser } from './../../../core/interfaces/core.interface.ts';
 import { IAppState } from 'src/app/store/app.reducer';
 import { Store } from '@ngrx/store';
@@ -93,27 +92,27 @@ export class AuthEffects {
     { dispatch: false }
   );
 
-  autoSignInEffect$ = createEffect(() => {
-    return this.actions.pipe(
-      ofType(autoSignInAction),
-      map((action) => {
-        const cacheUser = this.cacheService.get('user');
-        if (cacheUser) {
-          const user: IUser = JSON.parse(cacheUser);
-          return of(signInSuccessAction({ user: user, redirect: false }));
-        } else {
-          return of(
-            setNotificationAction({
-              notification: {
-                message: '[Cache User is Null] Cannot auto SignIn',
-                type: 'error',
-              },
-            })
-          );
-        }
-      })
-    );
-  });
+  // autoSignInEffect$ = createEffect(() => {
+  //   return this.actions.pipe(
+  //     ofType(autoSignInAction),
+  //     map((action) => {
+  //       const cacheUser = this.cacheService.get('user');
+  //       if (cacheUser) {
+  //         const user: IUser = JSON.parse(cacheUser);
+  //         return of(signInSuccessAction({ user: user, redirect: false }));
+  //       } else {
+  //         return of(
+  //           setNotificationAction({
+  //             notification: {
+  //               message: '[Cache User is Null] Cannot auto SignIn',
+  //               type: 'error',
+  //             },
+  //           })
+  //         );
+  //       }
+  //     })
+  //   );
+  // });
 
   // autoLogoutEffect$ = createEffect(
   //   () => {
